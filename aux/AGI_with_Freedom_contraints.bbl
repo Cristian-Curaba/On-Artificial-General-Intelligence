@@ -1,0 +1,96 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{digital_signature}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=7f9e934ee74ad86302770b3111eb2e75}{%
+           family={Alajbegović},
+           familyi={A\bibinitperiod},
+           given={Hermina},
+           giveni={H\bibinitperiod}}}%
+        {{hash=17bbdeed4c97913c1bac18a3b381d1d7}{%
+           family={Zečić},
+           familyi={Z\bibinitperiod},
+           given={Dževad},
+           giveni={D\bibinitperiod}}}%
+        {{hash=99457661d7807f23b36998e47de26e9b}{%
+           family={Jamak},
+           familyi={J\bibinitperiod},
+           given={Hasan},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e49984ab888f8387100b217b66c6c0f}
+      \strng{fullhash}{5e49984ab888f8387100b217b66c6c0f}
+      \strng{bibnamehash}{5e49984ab888f8387100b217b66c6c0f}
+      \strng{authorbibnamehash}{5e49984ab888f8387100b217b66c6c0f}
+      \strng{authornamehash}{5e49984ab888f8387100b217b66c6c0f}
+      \strng{authorfullhash}{5e49984ab888f8387100b217b66c6c0f}
+      \field{labelalpha}{AZJ06}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{09}
+      \field{title}{DIGITAL SIGNATURE ALGORITHM (DSA)}
+      \field{year}{2006}
+    \endentry
+    \entry{corrigibility}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=cbbde099df34ececed3687806331e238}{%
+           family={Soares},
+           familyi={S\bibinitperiod},
+           given={Nate},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8d74cebccc889f8e321ffdcf43b5eeee}{%
+           family={Fallenstein},
+           familyi={F\bibinitperiod},
+           given={Benja},
+           giveni={B\bibinitperiod}}}%
+        {{hash=5a15ffbd354a05726ba8041538403f90}{%
+           family={Armstrong},
+           familyi={A\bibinitperiod},
+           given={Stuart},
+           giveni={S\bibinitperiod}}}%
+        {{hash=549a1c22e1c5452641bfaff6196bd013}{%
+           family={Yudkowsky},
+           familyi={Y\bibinitperiod},
+           given={Eliezer},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{30926066f84af46ea5982f8871d618e9}
+      \strng{fullhash}{de1f1141bba15d0a8a0d88cd4ce3136c}
+      \strng{bibnamehash}{30926066f84af46ea5982f8871d618e9}
+      \strng{authorbibnamehash}{30926066f84af46ea5982f8871d618e9}
+      \strng{authornamehash}{30926066f84af46ea5982f8871d618e9}
+      \strng{authorfullhash}{de1f1141bba15d0a8a0d88cd4ce3136c}
+      \field{labelalpha}{Soa+15}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Workshops at the twenty-ninth AAAI conference on artificial intelligence}
+      \field{title}{Corrigibility}
+      \field{year}{2015}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
