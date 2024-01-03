@@ -19,39 +19,42 @@ sorting=ynt
 % Abstract
 \begin{abstract}
     In this article, I will propose a new concept in the field of AGI: freedom. It is fundamental to evaluate the power of an AGI system. Moreover, by reasoning with this concept, we may find new ways of controlling and handling risks.
+    
     I will also propose a way to constrain the AGI system and handle risky behaviours for humans. The key idea is to force the AGI system to send outputs through a programmed protocol by adding an "infinite" penalty term to the goal function (or fine-tuning it after the learning phase)\footnote{It's not straightforward how to do it since it is dependent on the learning technique applied. We, of course, have to penalize also any unauthorized modifications.}.
     
     The protocol can implement a monitoring procedure and send a warning to the programmers if the AGI system is going to do something dangerous\footnote{This type of prediction is challenging and, when the AGI is misaligned, it will try to deceive and hide behaviours we consider risky.}. 
     It can be updated safely (avoiding adversarial updates) thanks to the digital signature of the programmers. Therefore, we can solve the stop button problem by updating the protocol. 
     
+    Criticals are discussed at the end.
 \end{abstract}
 
 % Main content
 \section{Why freedom?}
-In the AGI literature,  two key concepts are accepted to describe an AGI system: intelligence and goal.
+In the AGI literature,  two key concepts are popular to describe an AGI system: intelligence and goal.
 The intelligence is defined as the ability to achieve a goal.
-The goal is practically formalized by the score/loss/cost/goal function which is the one that any learning system tries to optimize in the learning phase.
+The goal is concretely formalized by the score/loss/cost/goal function which is the one that any learning system tries to optimize in the learning phase.
 Wide and general goals characterize the AGI systems.
 Literature is trying to align the AGI systems with human desire but there are still no clear solutions.
 
-I want to propose a new concept in the field: freedom. 
+I want to consider a third element: freedom. 
 Freedom is the variety of actions that the system can perform in the world to achieve its goal.
 The power of the AGI system may be limited by the freedom that we (the company programmers) have granted to it.
-In the state of art of foundational models, even if they seem to understand the world and show highly intelligent behaviours, their freedom is still forceful constrained: they can just answer to questions.
+In the state of art of foundation models, even if they seem to partially understand the world and show highly intelligent behaviours, their freedom is still forceful constrained: they can just answer to questions.
+I think this is the main reason why acutal models are not consider existentially dangerous for humans: they are not free to act in the world.
+
 Can we design a way to constrain future AGI systems to be safe for humans?
 One desired propriety is the ability to shut down the system (also known as the "stop button problem" \cite{corrigibility}).
 In the following section, I will design a way to constrain the AGI system and, as by product, to solve the stop button problem.
 
 \section{Building a protocol with digital signature}
 The key idea is to force the AGI system to send outputs through a programmed protocol.
-This protocol can also include a monitoring system to evaluate the AGI outputs.
-The protocol can be updated safely by the company programmers based on the digital signature of the programmers. 
-Here I am supposing that the AGI system is equipped with a local and secure memory where the public keys of the company programmers and the whole protocol are stored\footnote{It's fundamental to fine-tune (or learn) the AGI with the original protocol in local memory: we want to avoid adversarial protocols which may use the identical public key and thus allow the AGI to go through an unknown adversarial protocol instead of the correct one. We must make sure, when designing the goal function for this purpose, to uniquely identify the correct address where the original protocol is stored.}.
-Check digital signature schemes \cite{digital_signature} for more details.
+The protocol can be updated safely by the company programmers based on the digital signature of the programmers. Check digital signature schemes \cite{digital_signature} for more details.
+To achieve this, I am supposing that the AGI system is equipped with a local and secure memory where the public keys of the company programmers and the whole protocol are stored\footnote{It's fundamental to fine-tune (or learn) the AGI with the original protocol in local memory: we want to avoid adversarial protocols which may use the identical public key and thus allow the AGI to go through an unknown adversarial protocol instead of the correct one. We must make sure, when designing the goal function for this purpose, to uniquely identify the correct address where the original protocol is stored.}.
+Such a protocol may also include a monitoring system to evaluate the AGI outputs.
 
 To ensure that the AGI system will go through the protocol, we will need to train it to do so by simply penalizing (virtually $-\infty$) the outputs that are not sent through the protocol.
 We also need to penalize any attempt to modify the protocol without the digital signature of the company programmers.
-In this way, the AGI system will learn to send outputs through the protocol "by design" and avoid modifying it.
+In this way, the AGI system will learn to send outputs through the protocol "by design" and it will avoid any unauthorized modifications.
 Adversarial attacks on the protocol will be ineffective because the AGI system will update the local protocol only if the digital signature of the company programmers is present.
 
 \section{Solving the stop button problem}
@@ -65,6 +68,7 @@ The protocol can be used to monitor the AGI system.
 For example, we can design a protocol to monitor the AGI system and send a warning to the programmers if the AGI system is going to do something dangerous.
 
 It can be used to encrypt the AGI outputs and, with this, all the advantages of encrypted messages.
+We must keep in mind that the AGI can bypass the protocol by delegating communications to external devices which have already established a communication with the AGI (it's similar to the VPN).
 
 \section{Bottlenecks, criticals and food for thought}
 
@@ -80,7 +84,7 @@ It can be used to encrypt the AGI outputs and, with this, all the advantages of 
     \item What if the company lose (or compromises) the private key of the digital signature? We could design a series of protocols with different keys and different levels of security. 
     In this way, we avoid a single point of failure but we also increase the overload on the system (which seems negligible to me).
     
-    \item Since the protocol is open-source, can the misaligned AGI learn to mathematically bypass the undesired encryption contained by the shut-down update? No, it would need to solve the hard-mathematical problem that we assume to be unbreakable even for super-intelligent AGI (I confidently hope that we will get a theoretical framework in cybersecurity satisfying this assumption).
+    \item Since the protocol is open-source, can the misaligned AGI learn to mathematically bypass the undesired encryption contained by the shut-down update? No, it would need to solve the hard-mathematical problem that we assume to be unbreakable even for super-intelligent AGI\footnote{I confidently hope that we will get a theoretical framework in cybersecurity satisfying this assumption.}.
     
 \end{itemize}
     
@@ -95,7 +99,7 @@ The more appealing the protocol advantages are, the more the company will be inc
 
 \section{Conclusion}
 In this article, I proposed a new concept to work with in the AGI field: freedom. Moreover, by reasoning with this concept, we may find new ways of controlling and handling risks.
-I also proposed a way to constrain the AGI system and handle detected risky behaviours for humans: the key idea is to force the AGI system to send outputs through a programmed protocol by adding an "infinite" penalty term to the goal function (or fine-tuning it after the learning phase). 
+I also proposed a way to constrain the AGI system and handle detected risky behaviours for humans: the key idea is to force the AGI system to send outputs through a programmed protocol by adding an "infinite" penalty term to the goal function in the training phase (or fine-tuning after it). 
 We can avoid unauthorized modifications by penalizing them in the same way.
 The protocol can implement a monitoring procedure and send a warning to the programmers if we spot risky behaviours.
 It can be updated safely (avoiding adversarial updates) thanks to the digital signature of the programmers. 
