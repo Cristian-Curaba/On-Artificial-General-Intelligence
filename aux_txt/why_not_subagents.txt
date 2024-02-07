@@ -1,0 +1,9 @@
+Main claim, stated two ways:
+
+1) A group of utility-maximizing subagents have an incentive to form contracts under which they converge to a single utility maximizer
+2) A system with incomplete preferences has an incentive to precommit/self-modify in such a way that the preferences are completed
+In general, they do this using randomization over preference-completions. 
+The only expected change each contract/precommitment/self-modification induces is a shift of probability mass from some states to same-or-more-preferred states for all of the subagents; 
+thus each contract is positive-sum.
+
+Myerson–Satterthwaite theorem

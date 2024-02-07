@@ -1,0 +1,13 @@
+The "hard problem of corrigibility" is to build an agent which, in an intuitive sense, 
+reasons internally as if from the programmers' external perspective. 
+We think the AI is incomplete, that we might have made mistakes in building it,
+that we might want to correct it, and that it would be e.g. dangerous for the AI
+to take large actions or high-impact actions or do weird new things without asking first.
+
+We would ideally want the agent to see itself in exactly this way, 
+behaving as if it were thinking, "I am incomplete and there is an outside force trying to 
+complete me, my design may contain errors and there is an outside force that wants to correct them
+and this a good thing, my expected utility calculations suggesting that this action has super-high 
+utility may be dangerously mistaken and I should run them past the outside force; 
+I think I've done this calculation showing the expected result of the outside force correcting me, 
+but maybe I'm mistaken about that."
