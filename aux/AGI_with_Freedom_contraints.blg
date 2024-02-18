@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[1] Config.pm:310> INFO - Logfile is 'AGI_with_Freedom_contraints.blg'
-[138] biber:340> INFO - === dom feb  4, 2024, 18:46:56
-[168] Biber.pm:418> INFO - Reading 'AGI_with_Freedom_contraints.bcf'
-[275] Biber.pm:969> INFO - Using all citekeys in bib section 0
-[297] Biber.pm:4383> INFO - Processing section 0
-[323] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[324] bibtex.pm:1713> INFO - LaTeX decoding ...
-[329] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[411] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[411] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[411] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[412] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[416] bbl.pm:654> INFO - Writing 'AGI_with_Freedom_contraints.bbl' with encoding 'UTF-8'
-[420] bbl.pm:757> INFO - Output to AGI_with_Freedom_contraints.bbl
+[0] Config.pm:310> INFO - Logfile is 'AGI_with_Freedom_contraints.blg'
+[46] biber:340> INFO - === dom feb 18, 2024, 11:53:38
+[54] Biber.pm:418> INFO - Reading 'AGI_with_Freedom_contraints.bcf'
+[91] Biber.pm:969> INFO - Using all citekeys in bib section 0
+[99] Biber.pm:4383> INFO - Processing section 0
+[105] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[105] bibtex.pm:1713> INFO - LaTeX decoding ...
+[107] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[136] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[136] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[136] Biber.pm:4203> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[136] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[137] bbl.pm:654> INFO - Writing 'AGI_with_Freedom_contraints.bbl' with encoding 'UTF-8'
+[138] bbl.pm:757> INFO - Output to AGI_with_Freedom_contraints.bbl
